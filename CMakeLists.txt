@@ -25,7 +25,13 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(EEPROMProgrammer EEPROMProgrammer.c )
+add_executable(EEPROMProgrammer 
+	EEPROMProgrammer.c
+	xmodem.c
+	ymodem.c
+	logger.c
+	EEPROM.c
+	const.c)
 
 pico_set_program_name(EEPROMProgrammer "EEPROMProgrammer")
 pico_set_program_version(EEPROMProgrammer "0.1")
